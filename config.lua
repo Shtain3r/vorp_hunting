@@ -28,7 +28,7 @@ Config.keys = {
     G = 0x760A9C6F, -- butcher sell and Stow
 }
 
-Config.aiButcherped = true -- spawn ai butched ped set to false if you dont want an ai butcher ped to spawn
+Config.aiButcherped = false -- spawn ai butched ped set to false if you dont want an ai butcher ped to spawn
 
 Config.joblocked = false   -- lock the butcher so only people with the job can access. u can change access to each butcher by editing this  butcherjob = "butcher"
 
@@ -36,7 +36,7 @@ Config.joblocked = false   -- lock the butcher so only people with the job can a
 -- The range for when a skinnableAnimal or Animal has a config value givenAmount of 0.
 -- Example: Animals with givenAmount = {0} can be sold to the butcher or be skinned, which will give the player a random number between 1 and 3 amount of givenItem
 Config.ItemQuantity = {
-    Max = 3,
+    Max = 1,
     Min = 1
 }
 
@@ -50,8 +50,8 @@ Config.Butchers = {
         coords = vector3(-339.0141, 767.6358, 115.5645),
         heading = 100.41544342041,
         radius = 3.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Strawberry Butcher",
@@ -61,8 +61,8 @@ Config.Butchers = {
         coords = vector3(-1753.143, -392.4201, 155.2578),
         heading = 181.37438964844,
         radius = 3.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Blackwater Butcher",
@@ -72,8 +72,8 @@ Config.Butchers = {
         coords = vector3(-754.0, -1285.158, 43.03),
         heading = 273.579,
         radius = 3.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Annesburg Butcher",
@@ -83,8 +83,8 @@ Config.Butchers = {
         coords = vector3(2934.51, 1301.159, 43.48365),
         heading = 70.572128295898,
         radius = 3.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Van Horn Butcher",
@@ -94,8 +94,8 @@ Config.Butchers = {
         coords = vector3(2991.844, 572.0218, 43.36182),
         heading = 259.52850341797,
         radius = 3.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Rhodes Butcher",
@@ -105,8 +105,8 @@ Config.Butchers = {
         coords = vector3(1297.578, -1277.589, 74.88102),
         heading = 146.60472106934,
         radius = 3.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Armadillo Butcher",
@@ -116,8 +116,8 @@ Config.Butchers = {
         coords = vector3(-3691.438, -2623.152, -14.75121),
         heading = 0.46632757782936,
         radius = 3.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Tumbleweed Butcher",
@@ -127,8 +127,8 @@ Config.Butchers = {
         coords = vector3(-5510.371, -2947.005, -1.894515),
         heading = 251.54911804199,
         radius = 3.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Landing Butcher",
@@ -138,8 +138,8 @@ Config.Butchers = {
         coords = vector3(-1435.61, -2330.28, 43.66),
         heading = 1.15,
         radius = 4.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     },
     {
         butchername = "Saint Denis Butcher",
@@ -149,8 +149,8 @@ Config.Butchers = {
         coords = vector3(2819.54, -1331.21, 45.00),
         heading = 51.8221321532,
         radius = 4.0,
-        showblip = true,
-        butcherped = true
+        showblip = false,
+        butcherped = false
     }
 }
 
@@ -172,9 +172,9 @@ Config.SkinnableAnimals = {
     --small animals skin them and sell them at the butcher no need to add them to  CONFIG.ANIMALS
     [989669666]   = {
         name = "Rat",
-        givenItem = { "rat_c" },
-        givenAmount = { 1 },
-        givenDisplay = { "Rat" },
+        givenItem = {  },
+        givenAmount = { 0 },
+        givenDisplay = {  },
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -189,9 +189,10 @@ Config.SkinnableAnimals = {
     ---------------------------------------------------- ANNIMAL SKINNER START HERE -----------------------------------------------
     [-1797625440] = {
         name = "Armadillo",
-        givenItem = { "stringy", "armadilloc", "armadillos" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Stringy meat", "Armadillo claws", "Armadillo pelt" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -201,9 +202,10 @@ Config.SkinnableAnimals = {
     },
     [-1170118274] = {
         name = "American Badger",
-        givenItem = { "stringy", "scentg", "badgers" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Stringy meat", "Scent glad", "Badger skin" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -213,9 +215,10 @@ Config.SkinnableAnimals = {
     },
     [1755643085]  = {
         name = "American Pronghorn Doe",
-        givenItem = { "venison", "prongs" },
-        givenAmount = { 1, 1 },
-        givenDisplay = { "Vension", "Pronghorn pelt" },
+        givenItem = { "venison", "leather" },
+        givenAmount = { 2, 1 },
+        givenDisplay = { "Venison", "Leather" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -225,9 +228,10 @@ Config.SkinnableAnimals = {
     },
     [-1124266369] = {
         name = "Bear",
-        givenItem = { "biggame", "bearc", "beart" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Big Game Meat", "Bear claws", "Bear tooth" },
+        givenItem = { "beef", "leather" },
+        givenAmount = { 3, 1 },
+        givenDisplay = { "Beef", "Leather" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -237,9 +241,10 @@ Config.SkinnableAnimals = {
     },
     [-1568716381] = {
         name = "Big Horn Ram",
-        givenItem = { "Mutton", "ramhorn", "rams" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Mutton", "Ramhorn", "Ram Pelt" },
+        givenItem = { "venison", "leather" },
+        givenAmount = { 2, 1 },
+        givenDisplay = { "Venison", "Leather" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -251,9 +256,10 @@ Config.SkinnableAnimals = {
         "Boar tusk", "Pig fat" }, money = 0, gold = 0, rolPoints = 0, xp = 1, texture = "animal_boar", action = "Skinned" }, ]]
     [-1963605336] = {
         name = "Buck",
-        givenItem = { "buckantler", "bucks", "venison" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Venison", "Buck Antlers", "Buck pelt" },
+        givenItem = { "venison", "leather" },
+        givenAmount = { 2, 1 },
+        givenDisplay = { "Venison", "Leather" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -263,9 +269,10 @@ Config.SkinnableAnimals = {
     },
     [1556473961]  = {
         name = "Bison",
-        givenItem = { "beef", "bisonhorn", "bisons" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Beef", "Bison Horn", "Bison pelt" },
+        givenItem = { "beef", "leather" },
+        givenAmount = { 2, 1 },
+        givenDisplay = { "Beef", "Leather" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -275,9 +282,10 @@ Config.SkinnableAnimals = {
     },
     [367637652]   = {
         name = "Bison",
-        givenItem = { "beef", "bisonhorn", "bisons" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Beef", "Bison Horn", "Bison pelt" },
+        givenItem = { "beef", "leather" },
+        givenAmount = { 2, 1 },
+        givenDisplay = { "Beef", "Leather" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -287,9 +295,10 @@ Config.SkinnableAnimals = {
     },
     [1957001316]  = {
         name = "Bull",
-        givenItem = { "beef", "bullhorn", "bulls" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Beef", "Bull horn", "Bull pelt" },
+        givenItem = { "beef", "leather" },
+        givenAmount = { 2, 1 },
+        givenDisplay = { "Beef", "Leather" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -299,9 +308,10 @@ Config.SkinnableAnimals = {
     },
     [1110710183]  = {
         name = "Deer",
-        givenItem = { "venison", "deerheart", "deerskin" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Vension", "Deer heart", "Deer pelt" },
+        givenItem = { "venison", "leather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Venison", "Leather" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -312,9 +322,10 @@ Config.SkinnableAnimals = {
     },
     [-1003616053] = {
         name = "Duck",
-        givenItem = { "bird", "duckfat", "birdfeather" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Bird meat", "Duck fat", "Birdfeather" },
+        givenItem = { "bird", "feather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Bird Meat", "Feater" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -325,9 +336,10 @@ Config.SkinnableAnimals = {
     },
     [1459778951]  = {
         name = "Eagle",
-        givenItem = { "bird", "eaglef", "eaglet" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Bird meat", "Eagle feather", "Eagle claws" },
+        givenItem = { "bird", "feather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Bird Meat", "Feater" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -338,9 +350,10 @@ Config.SkinnableAnimals = {
     },
     [831859211]   = {
         name = "Egret",
-        givenItem = { "bird", "egretf", "egretb" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Bird meat", "Egret feather", "Egret beak" },
+        givenItem = { "bird", "feather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Bird Meat", "Feater" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -354,9 +367,11 @@ Config.SkinnableAnimals = {
     "Skinned", type = "satchel_textures" }, ]]
     [252669332]   = {
         name = "American Red Fox",
-        givenItem = { "game", "foxt", "foxskin" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Game Meat", "Fox tooth", "Foxskin" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
+
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -366,9 +381,10 @@ Config.SkinnableAnimals = {
     },
     [-1143398950] = {
         name = "Big Grey Wolf",
-        givenItem = { "game", "wolftooth", "wolfpelt", "wolfheart" },
-        givenAmount = { 1, 1, 1, 1 },
-        givenDisplay = { "Game Meat", "wolf  tooth", "Wolf skin", "Wolf Heart" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -378,9 +394,10 @@ Config.SkinnableAnimals = {
     },
     [-885451903]  = {
         name = "Medium Grey Wolf",
-        givenItem = { "game", "wolftooth", "wolfpelt", "wolfheart" },
-        givenAmount = { 1, 1, 1, 1 },
-        givenDisplay = { "Game Meat", "wolf  tooth", "Wolf skin", "Wolf Heart" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -390,9 +407,10 @@ Config.SkinnableAnimals = {
     },
     [-829273561]  = {
         name = "Small Grey Wolf",
-        givenItem = { "game", "wolftooth", "wolfpelt", "wolfheart" },
-        givenAmount = { 1, 1, 1, 1 },
-        givenDisplay = { "Game Meat", "wolf  tooth", "Wolf skin", "Wolf Heart" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -402,9 +420,10 @@ Config.SkinnableAnimals = {
     },
     [1104697660]  = {
         name = "Vulture",
-        givenItem = { "bird", "condorf", "condorb" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Bird meat", "Vulture feather", "Vulture beak" },
+        givenItem = { "bird", "feather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Bird Meat", "Feater" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -415,9 +434,10 @@ Config.SkinnableAnimals = {
     },
     [-407730502]  = {
         name = "Snapping Turtle",
-        givenItem = { "stringy", "turtleshell", "turtlet" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Stringy meat", "Turtle shell", "Turtle tooth" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -428,9 +448,10 @@ Config.SkinnableAnimals = {
     },
     [-466054788]  = {
         name = "Wild Turkey",
-        givenItem = { "bird", "turkeyf", "turkeyb" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Bird meat", "Turkey feather", "Turkey beak" },
+        givenItem = { "bird", "feather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Bird Meat", "Feater" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -441,9 +462,10 @@ Config.SkinnableAnimals = {
     },
     [-2011226991] = {
         name = "Wild Turkey",
-        givenItem = { "bird", "turkeyf", "turkeyb" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Bird meat", "Turkey feather", "Turkey beak" },
+        givenItem = { "bird", "feather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Bird Meat", "Feater" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -454,9 +476,10 @@ Config.SkinnableAnimals = {
     },
     [-166054593]  = {
         name = "Wild Turkey",
-        givenItem = { "bird", "turkeyf", "turkeyb" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Bird meat", "Turkey feather", "Turkey beak" },
+        givenItem = { "bird", "feather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Bird Meat", "Feater" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -467,9 +490,10 @@ Config.SkinnableAnimals = {
     },
     [-22968827]   = {
         name = "Water Snake",
-        givenItem = { "wsnakeskin", "snaket", "stringy" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Watersnake pelt", "Snake tooth", "Stringy meat" },
+        givenItem = { "meat", "snaket" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Meat", "Snake Tooth" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -480,9 +504,10 @@ Config.SkinnableAnimals = {
     },
     [-229688157]  = {
         name = "CottonMouth Water Snake",
-        givenItem = { "wsnakeskin", "snaket", "stringy" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Watersnake pelt", "Snake tooth", "Stringy meat" },
+        givenItem = { "meat", "snaket" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Meat", "Snake Tooth" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -493,9 +518,10 @@ Config.SkinnableAnimals = {
     },
     [-1790499186] = {
         name = "Snake Red Boa",
-        givenItem = { "boaskin", "snaket", "stringy" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Boa Snake pelt", "Snake tooth", "Stringy meat" },
+        givenItem = { "meat", "snaket" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Meat", "Snake Tooth" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -506,9 +532,10 @@ Config.SkinnableAnimals = {
     },
     [1464167925]  = {
         name = "Snake Fer-De-Lance",
-        givenItem = { "snaket", "stringy", "asnakes" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Fer de Lance Snake pelt", "Snake tooth", "Stringy meat" },
+        givenItem = { "meat", "snaket" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Meat", "Snake Tooth" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -519,9 +546,10 @@ Config.SkinnableAnimals = {
     },
     [846659001]   = {
         name = "Black-Tailed Rattlesnake",
-        givenItem = { "snaket", "stringy", "fsnakes" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Black rattletail Snake pelt", "Snake tooth", "Stringy meat" },
+        givenItem = { "meat", "snaket" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Meat", "Snake Tooth" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -532,9 +560,10 @@ Config.SkinnableAnimals = {
     },
     [545068538]   = {
         name = "Western Rattlesnake",
-        givenItem = { "snaket", "stringy", "fsnakes" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Black rattletail Snake pelt", "Snake tooth", "Stringy meat" },
+        givenItem = { "meat", "snaket" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Meat", "Snake Tooth" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -545,9 +574,10 @@ Config.SkinnableAnimals = {
     },
     [-121266332]  = {
         name = "Striped Skunk",
-        givenItem = { "stringy", "scentg", "badgers" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Stringy meat", "Scent glad", "Badger skin" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -558,9 +588,10 @@ Config.SkinnableAnimals = {
     },
     [40345436]    = {
         name = "Merino Sheep",
-        givenItem = { "Mutton", "wool", "sheephead" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Mutton", "Wool", "Sheep head" },
+        givenItem = { "meat" },
+        givenAmount = { 1 },
+        givenDisplay = { "meat" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
@@ -571,9 +602,10 @@ Config.SkinnableAnimals = {
     },
     [-164963696]  = {
         name = "Herring Seagull",
-        givenItem = { "bird", "seagullf", "seagullb" },
-        givenAmount = { 1, 1, 1 },
-        givenDisplay = { "Bird meat", "Seagull feather", "Seagull beak" },
+        givenItem = { "bird", "feather" },
+        givenAmount = { 1, 1 },
+        givenDisplay = { "Bird Meat", "Feater" },
+        deletePelt = true,
         money = 0,
         gold = 0,
         rolPoints = 0,
